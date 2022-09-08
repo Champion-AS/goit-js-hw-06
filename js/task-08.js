@@ -21,7 +21,7 @@ function targetInput(event) {
     const { email, password } = event.currentTarget.elements;
     
     if (!email.value.trim() || !password.value.trim()) {
-        alert (`All fields must be filled!!!`);
+       return alert (`All fields must be filled!!!`);
     }
 
     const userData = {

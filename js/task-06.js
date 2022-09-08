@@ -10,10 +10,17 @@ inputEl.addEventListener('blur', onInputValid);
 
 function onInputValid(event) {
     if (event.target.value.length === inputLength) {
-        inputEl.classList.remove("invalid");
-        inputEl.classList.add("valid");
-    } else {
-        inputEl.classList.remove("valid");
-        inputEl.classList.add("invalid");
+        classListEl("valid", "invalid")
+        // inputEl.classList.remove("invalid");
+        // inputEl.classList.add("valid");
+    } else {        
+        classListEl("invalid", "valid")
+        // inputEl.classList.remove("valid");
+        // inputEl.classList.add("invalid");
     }
+}
+
+function classListEl(addEl, remEl) {
+    inputEl.classList.remove(remEl);
+        inputEl.classList.add(addEl);
 }
